@@ -23,7 +23,7 @@ class TarefasController {
     }
     await tarefasService.create(tarefa)
     .then(() => {
-      res.send({message: `tarefa ${tarefa.nome} Cadastrada com sucesso`})
+      res.send({message: `tarefa ${tarefa.titulo} Cadastrada com sucesso`})
     })
     .catch((err) => {
       console.error(err);
