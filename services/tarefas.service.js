@@ -5,22 +5,22 @@ class tarefasService {
   
   findAll = async () => await TarefasModel.find();
 
-  // busca musica por id
+  // busca tarefa por id
   findById = async (id) => {
     return await TarefasModel.findById(id)
   };
 
   // cria um objeto e salva no banco de dados.
-  create = async (musica) => {
+  create = async (tarefa) => {
     return await TarefasModel.create(tarefa)  
   }
 
   // recebe um id e um objeto para ser atualizado no banco.
-  edit = async (id, musica) => {
+  edit = async (id, tarefa) => {
     return await TarefasModel.updateOne({ _id: id}, tarefa)
   }
 
-  // recebe um id e exclui a musica do banco de acordo com esse id.
+  // recebe um id e exclui a tarefa do banco de acordo com esse id.
   delete = async (id) => {
     return await TarefasModel.deleteOne({ _id: id})
   }
